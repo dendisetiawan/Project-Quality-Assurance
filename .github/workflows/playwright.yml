@@ -41,3 +41,11 @@ jobs:
         name: playwright-report
         path: playwright-pro-portofolio/playwright-report/
         retention-days: 30
+
+        # Tambahkan ini di bagian paling bawah setelah upload-artifact
+    - name: Deploy Report to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: playwright-pro-portofolio/playwright-report
