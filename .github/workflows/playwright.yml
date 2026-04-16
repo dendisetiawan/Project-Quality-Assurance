@@ -20,6 +20,11 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
       env:
+      defaults:
+      run:
+        working-directory: playwright-pro-portofolio
+    
+    
         # Masukkan variabel env di sini agar server bisa baca
         BASE_URL: ${{ secrets.BASE_URL }}
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
