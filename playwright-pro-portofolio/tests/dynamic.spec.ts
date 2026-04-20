@@ -10,5 +10,5 @@ test('handle dynamic element removal', async ({ page }) => {
     await dynamicPage.clickRemove();
 
     // 2. Tambahkan tanda seru (!) agar sama persis dengan di website
-    await expect(dynamicPage.message).toHaveText("It's gone!"); 
+    await expect(dynamicPage.message).toHaveText("It's gone!", {timeout: 10000}); 
 });

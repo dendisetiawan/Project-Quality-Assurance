@@ -1,0 +1,20 @@
+[
+  {
+    "scenario": "Login Standard User",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "expectedStatus": "success"
+  },
+  {
+    "scenario": "Login Locked Out User",
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "expectedStatus": "locked"
+  },
+  {
+    "scenario": "Login Password Salah",
+    "username": "standard_user",
+    "password": "wrong_password",
+    "expectedStatus": "failed"
+  }
+]
